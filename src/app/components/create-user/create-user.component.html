@@ -1,0 +1,79 @@
+<div>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3>Create New User</h3>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="firstName" class="form-control" placeholder="First name" type="text">
+    </div>
+  </div>
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="lastName" class="form-control" placeholder="Last name" type="text">
+    </div>
+  </div>
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="email" class="form-control" placeholder="Email" type="email">
+    </div>
+  </div>
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="password" class="form-control" placeholder="Password" type="password">
+    </div>
+  </div>
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-1 text-center">
+      <div class="form-check form-check-inline">
+        <input [(ngModel)]="create" class="form-check-input" id="create" type="checkbox" value="create">
+        <label class="form-check-label" for="create">create</label>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="form-check form-check-inline">
+        <input [(ngModel)]="read" class="form-check-input" id="read" type="checkbox" value="read">
+        <label class="form-check-label" for="read">read</label>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="form-check form-check-inline">
+        <input [(ngModel)]="update" class="form-check-input" id="update" type="checkbox" value="update">
+        <label class="form-check-label" for="update">update</label>
+      </div>
+    </div>
+
+    <div class="col-1 text-center">
+      <div class="form-check form-check-inline">
+        <input [(ngModel)]="delete" class="form-check-input" id="delete" type="checkbox" value="delete">
+        <label class="form-check-label" for="delete">delete</label>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 d-grid">
+      <button (click)="createUser()" class="btn btn-success btn-block rounded-pill" type="button">Create</button>
+    </div>
+  </div>
+
+  <app-popup></app-popup>
+</div>

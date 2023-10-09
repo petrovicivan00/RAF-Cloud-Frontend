@@ -1,0 +1,33 @@
+<div>
+  <br>
+  <br>
+
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3>Login</h3>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="email" class="form-control" placeholder="Email" type="email">
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <input [(ngModel)]="password" class="form-control" placeholder="Password" type="password">
+    </div>
+  </div>
+  <br>
+
+  <div class="row justify-content-center">
+    <div class="col-md-2 d-grid">
+      <button (click)="login()" class="btn btn-success btn-block rounded-pill" type="button">Login</button>
+    </div>
+  </div>
+
+  <app-popup></app-popup>
+</div>

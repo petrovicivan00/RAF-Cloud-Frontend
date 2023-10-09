@@ -1,0 +1,35 @@
+<div class="container">
+  <br><br>
+  <div class="row">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Permissions</th>
+        <th *ngIf="canDelete">Delete</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td>
+          <div (click)="openUpdateUser(user.id)" *ngIf="canUpdate; else cantUpdate" id="underline-email">
+            {{ user.email }}
+          </div>
+          <ng-template #cantUpdate>
+            {{ user.email }}
+          </ng-template>
+        </td>
+        <td>{{ printRoles(user.userRoles) }}</td>
+        <td *ngIf="canDelete">
+          <button (click)="deleteUser(user.id)" class="btn btn-outline-danger rounded-pill" type="button">DELETE</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <app-popup></app-popup>
+</div>
